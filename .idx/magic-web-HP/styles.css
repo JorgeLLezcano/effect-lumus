@@ -35,8 +35,12 @@
   .front {
     /* Styles for the front face */
   
-   width: 100%;
+  
    
+  }
+  .front img{
+    height: 100%;
+    
   }
   .front h1{
     color: white;
