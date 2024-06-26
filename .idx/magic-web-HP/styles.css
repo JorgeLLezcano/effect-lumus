@@ -34,8 +34,16 @@
   
   .front {
     /* Styles for the front face */
-    height: 100%;
-    width: 100%;
+  
+   width: 100%;
+   
+  }
+  .front h1{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   
   .back {
@@ -46,6 +54,21 @@
   
   .card:hover {
     transform: rotateY(180deg); /* Flip the card on hover */
+  }
+
+
+
+  .card-info {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    z-index: 2;
+    background-color: transparent;
   }
   body{
     background-color: #333;
@@ -67,7 +90,7 @@
       transform: scale(4);
     }
     100%{
-      transform: scale(0);
+      transform: scale(1);
     }
   }
   
