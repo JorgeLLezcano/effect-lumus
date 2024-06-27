@@ -17,7 +17,11 @@ document.addEventListener('DOMContentLoaded', function () {
   const API= 'https://hp-api.onrender.com/api/characters'
   const url= 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzsDkJnmn3FmORRlfadPjJkIBnwP7rcwxkNw&s'
 
+  const loadingMessage = document.getElementById('loading-message');
+  loadingMessage.style.display = 'block'
+
   const container = document.querySelector('.conteiner');
+
 
   fetch(API)
     .then(response => response.json())
@@ -40,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
         </div>
         `
         container.innerHTML += personajes;
-        
+        loadingMessage.style.display = 'none';
       });
     });
-  
+ 

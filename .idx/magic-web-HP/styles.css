@@ -13,6 +13,8 @@
     transition: transform 2s ease;
     position: relative;
     border-radius: 15px; 
+    transform-style: preserve-3d;
+    perspective: 1000px;
   }
   
   .card img{
@@ -34,20 +36,29 @@
   
   .front {
     /* Styles for the front face */
-  
-  
-   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    text-wrap: wrap;
   }
   .front img{
     height: 100%;
     
   }
   .front h1{
+    position: absolute;
     color: white;
     font-size: 30px;
     text-align: center;
     margin-top: 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-wrap: wrap;
+    align-items: center;
   }
   
   .back {
@@ -97,4 +108,19 @@
       transform: scale(1);
     }
   }
+  
+  #loading-message {
+    display: none; /* Initially hidden */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    z-index: 9999;
+    position: absolute;
+    
+  }
+  
+
+
   
