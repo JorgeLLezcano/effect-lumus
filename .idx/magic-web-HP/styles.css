@@ -121,6 +121,13 @@
     
   }
   
+  #loading-message img {
+    display: flex;
+    height: 200px;
+    width: 300px;
+    mask-image: linear-gradient(transparent, black -93%, transparent);
+    filter: blur(2px);
+  }
 
 
   

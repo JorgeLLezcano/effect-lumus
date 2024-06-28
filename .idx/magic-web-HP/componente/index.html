@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error 404</title>
+</head>
+<style>
+     :root{
+        background-color: #333;
+    }
+    .error{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        color: white;
+    }
+    .luces-uno,
+    .luces-dos{
+       
+        background-color: white;
+        border-radius: 50%;
+        position: fixed;
+        filter: blur(5px);
+    }
+    .luces-uno{
+        top: 20px;
+        left: 20px;
+        animation:move 5s infinite ;
+    }
+    .luces-dos{
+        bottom: 20px;
+        right: 20px;
+        animation:move 10s infinite ;
+    }
+    .luces-uno::after{
+       content: "";
+        width: 200px;
+        height: 200px;
+        background-color: white;
+        border-radius: 50%;
+        position: fixed;
+        filter: blur(5px);
+        transform: translateY(-300px);
+       
+    }
+    .luces-dos::after{
+        content: "";
+        width: 200px;
+        height: 100px;
+        background-color: white;
+        border-radius: 50%;
+        position: fixed;
+        filter: blur(5px);
+        transform: translateY(-180px); 
+        
+    }
+    @keyframes latencia{
+        0%{
+            transform: scale(1);
+        }
+        50%{
+            transform: scale(4);
+        }
+        100%{
+            transform: scale(1);
+        }
+    }
+    h1{
+        font-size: 30px;
+    }
+    p{
+        font-size: 20px;
+    }
+    h1:hover{
+      text-shadow: 20px 20px 30px rgba(0, 0, 0, 0.5)
+    }
+@keyframes move {
+ 0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+    
+}
+</style>
+<body>
+    <div class="luces-uno"></div>
+    <div class="luces-dos"></div>
+    <div class="error">
+        <h1>Error 404</h1>
+        <p>La página que estás buscando no existe.</p>
+    </div>
+   
+</body>
+</html>
