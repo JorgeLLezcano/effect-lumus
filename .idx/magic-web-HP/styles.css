@@ -43,6 +43,7 @@
     flex-direction: column;
     align-content: center;
     text-wrap: wrap;
+    transition: opacity 2s ease;
   }
   .front img{
     height: 100%;
@@ -71,7 +72,10 @@
     transform: rotateY(180deg); /* Flip the card on hover */
   }
 
-
+  .card:hover .front{
+    opacity: 0;
+    filter: blur(50px);
+  }
 
   .card-info {
     position: absolute;

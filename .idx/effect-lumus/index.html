@@ -15,6 +15,7 @@
         align-items: center;
         background-color: #333;
         font-family: sans-serif;
+        align-content: center;
      }
       .elemento{
         position: fixed;
@@ -22,7 +23,14 @@
         font-size: 300px;
         color:#333;
         mask-image: linear-gradient(transparent, black -93%, transparent);
+        width: 100%;
+        align-items: center;
+        display: flex;
+        justify-content: center;
       
+      }
+      .elemento:hover{
+        text-shadow: 20px 20px 30px rgba(0, 0, 0, 0.5);
       }
       .lumus{
         background-color: white;
@@ -42,25 +50,31 @@
       </div>
       
       <script>
-        document.addEventListener('DOMContentLoaded', function () {
-    let lumus = document.querySelector('.lumus');
-    let elemento= document.querySelector('.elemento')
-  
-  
-    document.addEventListener('mousemove', function (e) {
-      const mouseX = e.clientX;
-      const mouseY = e.clientY;
-  
-      lumus.style.left = mouseX + 'px';
-      lumus.style.top = mouseY + 'px';
- 
-      
-       
-     elemento.style.textShadow=+mouseY+'px 20px 20px'
-      elemento.style.textShadow= +mouseX+'px 20px 20px'
+ document.addEventListener('DOMContentLoaded', function () {
+  let lumus = document.querySelector('.lumus');
+  let elemento = document.querySelector('.elemento');
 
-    });
+  document.addEventListener('mousemove', function (e) {
+    //le damos movimiento a lumus
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
+
+    lumus.style.left = mouseX + 'px';
+    lumus.style.top = mouseY + 'px';
+
+    // Calcular valores de desplazamiento basados en la posición de lumus relativa a elemento
+    const elementoRect = elemento.getBoundingClientRect();
+    const lumusCenterX = mouseX - elementoRect.left + lumus.offsetWidth / 2;
+    const lumusCenterY = mouseY - elementoRect.top + lumus.offsetHeight / 2;
+
+    // Calcular los desplazamientos de la sombra de forma dinámica
+    const shadowOffsetX = (lumusCenterX - elemento.offsetWidth / 2) / elemento.offsetWidth;
+    const shadowOffsetY = (lumusCenterY - elemento.offsetHeight / 2) / elemento.offsetHeight;
+
+    // Establecer la sombra de texto usando los desplazamientos calculados y las propiedades deseadas
+    elemento.style.textShadow = `${-shadowOffsetX * 50}px ${-shadowOffsetY * 50}px 20px #333`;
   });
+});
   
       </script>
 </body>
