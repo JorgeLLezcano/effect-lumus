@@ -27,9 +27,24 @@
         align-items: center;
         display: flex;
         justify-content: center;
-        animation: revalacion 4s ease both;
+        
         
       }
+    @keyframes dash-text {
+  0% {
+    text-stroke-opacity: 0;
+  }
+  100% {
+    text-stroke-opacity: 1;
+  }
+}
+
+.elemento h1 {
+  animation: dash-text 1.5s ease-in infinite;
+  -webkit-text-stroke: 2px #ffffff3d; /* Agregar trazo de texto inicial */
+}
+
+
      @keyframes revalacion {
       0%{
         opacity: 0;
@@ -78,7 +93,7 @@
     const shadowOffsetY = (lumusCenterY - elemento.offsetHeight / 2) / elemento.offsetHeight;
 
     // Establecer la sombra de texto usando los desplazamientos calculados y las propiedades deseadas
-    elemento.style.textShadow = `${-shadowOffsetX * 50}px ${-shadowOffsetY * 50}px 15px black`;
+    elemento.style.textShadow = `${-shadowOffsetX * 150}px ${-shadowOffsetY * 150}px 15px black`;
   });
 });
   //creamos nuevo repo solo para este proyecto
