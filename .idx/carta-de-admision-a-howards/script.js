@@ -1,32 +1,30 @@
-// const root =document.querySelector('.root')
+// const API = 'https://hp-api.onrender.com/api/characters';
+// const wrapp = document.querySelector('.wrapp');
+// const imagenPorDefecto = "https://placehold.it/200x200"; // Imagen por defecto si no hay una disponible
 
-// const APPI='https://hp-api.onrender.com/api/characters'
-
-// fetch(APPI)
+// fetch(API)
 //   .then(response => response.json())
 //   .then(data => {
 //     data.forEach(character => {
-//      let tarjetas=`
-//      <div class="card">
+//       const personajes = `
+//         <div class="card">
 //           <div class="front">
-//             <img src="${character.image}">
-//               <div class="card-info">
-//                   <h3>${character.name}</h3>
-//                   <p>House: ${character.house}</p>
-//                   <p>Patronus: ${character.patronus}</p>
-//               </div>
-//             </div>
-//       </div>
-//       `
-//       root.innerHTML += tarjetas;
-  
-//     });
+//             <h1>${character.name}</h1>
+//             <img src="${character.image || imagenPorDefecto}">
+//           </div>
+//         </div>
+//       `;
+//       wrapp.innerHTML += personajes;
+//     }
+//     );
 //   });
+
+  
 const API = 'https://hp-api.onrender.com/api/characters';
 const wrapp = document.querySelector('.wrapp');
 const imagenPorDefecto = "https://placehold.it/200x200";
-const nextButton = document.querySelector('nextButton');
-const prevButton = document.querySelector('prevButton'); // Asume que tienes un botón con este ID
+const nextButton = document.querySelector('.nextButton'); // Asume que tienes un botón con este ID
+const prevButton = document.querySelector('.prevButton')
 let currentIndex = 0;
 
 fetch(API)
@@ -41,25 +39,36 @@ fetch(API)
           <div class="front">
             <h1>${character.name}</h1>
             <img src="${character.image || imagenPorDefecto}">
+            
           </div>
         </div>
+   
       `;
       wrapp.innerHTML = personajes;
     }
 
     // Mostrar el primer personaje al cargar la página
-    displayCharacter(currentIndex);
-
+    
+      displayCharacter(currentIndex);
+  
+    
     // Evento para el botón Next
     nextButton.addEventListener('click', () => {
       currentIndex++;
+     
+     
       if (currentIndex >= characters.length) {
         currentIndex = 0; // Volver al principio si llegamos al final
+        
       }
+      
       displayCharacter(currentIndex);
     });
+   
+
     prevButton.addEventListener('click', () => {
       currentIndex--;
+     
       if (currentIndex >= characters.length) {
         currentIndex = 0; // Volver al principio si llegamos al final
       }

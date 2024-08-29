@@ -1,12 +1,46 @@
-.card{
-
+body{
+    background: ;
+  }
+  .card{
+    height: 300px;
+    width: 250px;
+    position: relative;
+  }
+  
+  .front img{
+    height: 100%;
+    width: 100%;
+    animation: fede 2s ease both;
+  }
+  button{
+    position: absolute;
+  }
+  .nextButton{
+   left: 0;
+  }
+  .prevButton{
+   right: 0;
+  }
+  
+  .wrapp{
     display: flex;
-
-}
-.back{
-
-}
-
-.card-info{
-
-}
+    justify-content: center;
+    
+    
+  }
+  /* .fade-out {
+    opacity: 0.8;
+    
+    animation: fede 2s ease both;
+  } */
+  
+  @keyframes fede{
+    0%{
+      opacity: 0.1;
+      transform: translateX(0px);
+    }
+    100%{
+      opacity: 1;
+       transform: translateX(-100px);
+    }
+  }
