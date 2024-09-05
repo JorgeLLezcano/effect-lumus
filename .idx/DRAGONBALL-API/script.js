@@ -1,4 +1,4 @@
-const API = 'https://dragonball-api.com/api/characters/.';
+const API = 'https://dragonball-api.com/api/characters?limit=45';
 const container = document.querySelector('.conteiner'); // Assuming your container has the class 'container'
 
 fetch(API)
@@ -17,6 +17,7 @@ fetch(API)
                 <p><strong>ki maximo</strong>: ${character.maxKi}</p>
                 <p><strong>raza</strong>: ${character.race}</p>
               </div>
+             
             </div>
           </div>
         `;

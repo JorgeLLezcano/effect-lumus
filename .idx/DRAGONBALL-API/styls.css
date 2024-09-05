@@ -1,29 +1,41 @@
 body{
-    background: ;
-  }
+  background: none;
+  padding: 0;
+  border: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.conteiner{
+  display: grid;
+  grid-template-columns: 300px 300px 300px  ;
+  gap: 5px;
+  aspect-ratio: 1 / 1;
   
-  .conteiner{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 5px;
-  }
+}
+
+.card{
+  display: flex;
+  height: 100%;
+  width: 100%;
   
-  .card{
-    display: flex;
-    height: 100%;
-    width: 100%;
-  }
-  .front{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    background-color: grey;
-    padding: 5px;
-    box-sizing: border-box;
-  }
-  .front img{
-    height: 100%;
-    width: 100%;
-  }
+}
+.front{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: grey;
+  padding: 5px;
+  box-sizing: border-box;
+}
+.front img{
+  height: 100%;
+  width: 100%;
+  transition: transform .2s ease;
+}
+
+.front img:hover{
+transform: scale(1.5);
+}
