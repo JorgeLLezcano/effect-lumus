@@ -60,8 +60,9 @@ search.addEventListener('input', async () => {
     });
 
     personajesFiltrados.forEach(personaje => {
-      const divPersonaje = document.createElement('div');
-      divPersonaje.innerHTML = `
+      
+      const divPersonaje = `
+      <div>
         <h2>${personaje.name}</h2>
         <img src="${personaje.image}" alt="${personaje.name}">
         <div class="card-info">
@@ -69,8 +70,10 @@ search.addEventListener('input', async () => {
         <p><strong>ki maximo</strong>: ${personaje.maxKi}</p>
         <p><strong>raza</strong>: ${personaje.race}</p>
       </div>
+      </div>
       `;
-      resultados.appendChild(divPersonaje);
+      
+      resultados.innerHTML+= divPersonaje
     });
   } else {
     console.error('No characters found in the response.');

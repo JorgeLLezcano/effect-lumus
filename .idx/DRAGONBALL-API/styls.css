@@ -39,7 +39,20 @@ body{
 .front img:hover{
 transform: scale(1.5);
 }
-
+.resultado div{
+/* Suggested code may be subject to a license. Learn more: ~LicenseLog:242358603. */
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  margin: 20px;
+  .card-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+}
 .resultado.hidden {
   display: none;
 }
