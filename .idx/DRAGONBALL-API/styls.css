@@ -8,7 +8,7 @@ body{
 
 .conteiner{
   display: grid;
-  grid-template-columns: 300px 300px 300px  ;
+  grid-template-columns: 300px 300px 300px 300px ;
   gap: 5px;
   aspect-ratio: 1 / 1;
   
@@ -39,3 +39,19 @@ body{
 .front img:hover{
 transform: scale(1.5);
 }
+
+.resultado.hidden {
+  display: none;
+}
+
+.resultado.visible {
+  display: block;
+  height: 100vh;
+  
+& img{
+  height: 100%;
+ 
+}
+}
+
+
