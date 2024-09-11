@@ -1,29 +1,79 @@
 body{
-    background: ;
-  }
-  .wrapp{
-     height: 300px;
-   width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .card{
-    display: flex;
-    height: 300px;
-    width: 200px;
-  }
+  background: ;
+}
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+.wrapp{
+   height: 300px;
+ width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card{
+  display: flex;
+  height: 300px;
+  width: 200px;
+  animation: move .2s ease both;
+}
+.move-left{
+   animation: move-left .2s ease both;
+}
+.imgIndex{
+   transform: scale(1.5);
+   animation: great .2s ease both;
+}
+.prevIndex{
+   opacity: 0.5;
   
-  .card img{
-    height: 100%;
-    animation: move .2s ease both;
-  }
+}
+.nextIndex{
+   opacity: 0.5;
   
-  @keyframes move{
+}
+@keyframes great{
+  0%{
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(1.5);
+  }
+}
+@keyframes move{
+  0%{
+    
+    transform: translateX(0px);
+  }
+  100%{
+   
+    transform: translateX(-100px);
+  }
+}
+
+@keyframes move-left{
     0%{
-      transform: translateX(0px);
-    }
-    100%{
-      transform: translateX(-100px);
-    }
+    opacity: 0.5;
+    transform: translateX(0px);
   }
+  100%{
+    opacity: 1;
+    transform: translateX(100px);
+  }
+}
+
+
+button{
+  position: absolute;
+}
+
+.nextButton{
+  left: 0;
+}
+.prevButton{
+  right: 0;
+}

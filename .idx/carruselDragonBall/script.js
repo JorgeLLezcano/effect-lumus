@@ -18,10 +18,10 @@ fetch(API)
 
       const personajes = `
         <div class="card">
-          <img src="${characters[prevIndex].image}" alt="Imagen anterior">
-          <img src="${character.image}" alt="${character.name}">
-          <img src="${characters[nextIndex].image}" alt="Imagen siguiente">
-        </div>
+          <img src="${characters[prevIndex].image}" alt="Imagen anterior" class='prevIndex'>
+          <img src="${character.image}" alt="${character.name}" class='imgIndex'>
+          <img src="${characters[nextIndex].image}" alt="Imagen siguiente" class='nextIndex'>
+        </div >
       `;
 
       wrapp.innerHTML = personajes;
@@ -30,15 +30,21 @@ fetch(API)
     // Mostrar el primer personaje al cargar la página
     displayCharacter(currentIndex);
 
+
     // Eventos para los botones
     nextButton.addEventListener('click', () => {
       currentIndex++;
+ const card= document.querySelector('.card')
+      card.classList.remove('move-left')
+    
       if (currentIndex >= characters.length) currentIndex = 0;
       displayCharacter(currentIndex);
     });
 
     prevButton.addEventListener('click', () => {
       currentIndex--;
+      const card= document.querySelector('.card')
+      card.classList.add('move-left')
       if (currentIndex < 0) currentIndex = characters.length - 1;
       displayCharacter(currentIndex);
     });
