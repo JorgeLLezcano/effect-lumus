@@ -38,6 +38,7 @@
         
         
       }
+  
     @keyframes dash-text {
   0% {
     text-stroke-opacity: 0;
@@ -69,6 +70,27 @@
         border-radius: 50%;
         filter: blur(50px);
         box-shadow: 1px 1px 20px 20px white;
+     
+
+      }
+   
+.parpadeo{
+  animation: parpadeo .1s infinite;
+}
+      @keyframes parpadeo {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      .lumus:hover{
+        animation: parpadeo 1s infinite;
+        
       }
 
 </style>
@@ -102,9 +124,18 @@
 
     // Establecer la sombra de texto usando los desplazamientos calculados y las propiedades deseadas
     elemento.style.textShadow = `${-shadowOffsetX * 150}px ${-shadowOffsetY * 150}px 15px black`;
+    
   });
+  setInterval(function () {
+    lumus.classList.add('parpadeo'); // Agregar clase para comenzar la animación
+    setTimeout(function () {
+      lumus.classList.remove('parpadeo'); // Remover clase después de 1 segundo
+    }, 1000); // La duración de la animación es 1s, por eso se remueve después de 1s
+  }, 5000); // Cada 5 segundos
+  
 });
   //creamos nuevo repo solo para este proyecto
+  
       </script>
 </body>
 
