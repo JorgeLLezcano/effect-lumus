@@ -1,0 +1,23 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+.wrapp{
+  display: grid;
+  grid-template-columns: 300px 300px 300px 300px ;
+  gap: 5px;
+  aspect-ratio: 1 / 1;
+}
+
+.card img{
+  height: 100%;
+  width: 100%;
+}
+
+.card{
+  
+}

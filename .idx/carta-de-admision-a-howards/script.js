@@ -1,23 +1,4 @@
-// const API = 'https://hp-api.onrender.com/api/characters';
-// const wrapp = document.querySelector('.wrapp');
-// const imagenPorDefecto = "https://placehold.it/200x200"; // Imagen por defecto si no hay una disponible
 
-// fetch(API)
-//   .then(response => response.json())
-//   .then(data => {
-//     data.forEach(character => {
-//       const personajes = `
-//         <div class="card">
-//           <div class="front">
-//             <h1>${character.name}</h1>
-//             <img src="${character.image || imagenPorDefecto}">
-//           </div>
-//         </div>
-//       `;
-//       wrapp.innerHTML += personajes;
-//     }
-//     );
-//   });
 
   
 const API = 'https://hp-api.onrender.com/api/characters';

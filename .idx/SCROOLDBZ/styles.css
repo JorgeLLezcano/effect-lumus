@@ -13,8 +13,8 @@ body{
     /* Adjust scrollbar style if needed */
     /* scrollbar-width: thin; */
     /* scrollbar-color: #ccc #f0f0f0; */
-    animation: scroll-right linear forwards;
-    animation-timeline: scroll(root); 
+    animation: scroll-right 2s linear both;
+    /* animation-timeline: scroll(root);  */
   
   }
   .card{
