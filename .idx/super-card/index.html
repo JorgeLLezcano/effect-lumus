@@ -77,3 +77,37 @@ h1{
       </div>
 </body>
 </html>
+
+//el truco de esta tarjeta esta en las propiedades
+//    transform: translateZ(17vmin); que crea una separacion del elemento 
+//del cual su pociosion es relativa
+// El efecto solo hace efecto cuando el elemto padre tiene 
+// una propideda     transform: rotateY(35deg);
+
+.card-clase{
+    height: 300px;
+    background-color: violet;
+    aspect-ratio: 9 / 14;
+    max-width: 70vmin; */
+    posició: relativa;
+    animation: move 10s 0s infinite;//transform: rotateY(-20deg) rotateX(-5deg); // <--- este es el truco
+    transform-style: preserve-3d;
+    /* border-radius: 6vmin; */
+    }
+    .card-clase h2{
+        position: absolute;
+        top: 30%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        transform: translateZ(10vmin);/// <--- este es el truco
+        transform-style: preserve-3d;
+    }
+
+    
+    basado en
+
+
+    https://codepen.io/olivier3lanc/full/zYXxyEj
