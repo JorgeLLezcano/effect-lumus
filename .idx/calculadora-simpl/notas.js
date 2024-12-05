@@ -1,4 +1,4 @@
-correcto:
+//correcto:
 const input = document.querySelector('input');
 const sumar = document.getElementById('sumar');
 const restar = document.getElementById('restar');
@@ -43,7 +43,7 @@ restar.addEventListener('click', function() {
   input.value = '';
 });
 
-ejercicio ejemplo:
+//ejercicio ejemplo:
 const input = document.querySelector('input');
 const sumar = document.getElementById('sumar');
 const restar = document.getElementById('restar');
