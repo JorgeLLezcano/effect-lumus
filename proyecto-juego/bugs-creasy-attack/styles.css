@@ -1,0 +1,114 @@
+body{
+     height: 100vh;
+      display: flex;
+      justify-content: space-between;
+      
+      align-items: center;
+      margin: 0;
+      background-color: rgba(18, 172, 18, 0.699);
+}
+h1{
+    position: absolute;
+    top:0;
+}
+img{
+    background-color: transparent;
+    mix-blend-mode: multiply;
+    transform: scaleX;
+    /* animation: move-go 2s linear infinite; */
+  position: relative;
+}
+#frame{
+    position: absolute;
+    left: 10px;
+    opacity: 0;
+}
+
+.move{
+    opacity: 1;
+    animation: move-antz .2s ease-in-out infinite;
+}
+
+@keyframes move-antz {
+    0%{
+opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+#live{
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background-color: red;
+    border: 1px solid white;
+    top: -40px;
+}
+#live-enemi{
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background-color: red;
+    border: 1px solid white;
+    top: -40px;
+}
+@keyframes move-go {
+    0%{
+transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(50px);
+    }
+}
+
+
+#antz {
+    /* width: 100px;
+    height: 100px; */
+    /* background-color: #4CAF50; */
+    position: relative;
+    background-color: transparent;
+    transition: all 0.1s ease-in-out;
+    cursor: default;
+    mix-blend-mode: multiply;
+  }
+
+  #frog{
+    position: relative;
+    background-color: transparent;
+    transition: all 0.1s ease-in-out;
+    cursor: default;
+    mix-blend-mode: multiply;
+  }
+
+
+  .derrota{
+    background-color: red;
+    animation: killer 1s linear both;
+  }
+
+  @keyframes killer {
+    0%{
+        background-color: rgb(168, 64, 64);
+        opacity: 0.5;
+    }
+    25%{
+        background-color: red;
+        opacity: 1;
+    }
+    50%{
+        background-color: red;
+        opacity: 0.5;
+    }
+    75%{
+        background-color: red;
+        opacity: 1;
+    }
+    100%{
+        background-color: red;
+        opacity: 0;
+        display: none;
+    }
+    
+  }
